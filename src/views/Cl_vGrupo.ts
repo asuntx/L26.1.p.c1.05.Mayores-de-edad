@@ -22,9 +22,9 @@ export default class Cl_vGrupo {
   }
 
   reportar({ grupo }: { grupo: Cl_mGrupo }): void {
-    this.lblContPersonas.innerHTML = `${grupo.contPersonas}`;
-    this.lblContMayores.innerHTML = `${grupo.contMayores}`;
-    this.lblPorcentajeMayores.innerHTML = `${grupo.porcentajeMayores.toFixed(
+    this.lblContPersonas.innerHTML = `${grupo.cantidadPer}`;
+    this.lblContMayores.innerHTML = `${grupo.cantidadMa}`;
+    this.lblPorcentajeMayores.innerHTML = `${grupo.porcentajeMa.toFixed(
       2,
     )}`;
   }
