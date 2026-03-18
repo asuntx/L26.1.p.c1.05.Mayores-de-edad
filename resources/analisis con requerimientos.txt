@@ -1,0 +1,69 @@
+5. Info mayores de edad: Sea el nombre y la edad de varias personas. Se 
+neceita un programa que lea y reporte la cantidad de personas procesadas, 
+la cantidad de personas mayores de edad, el porcentaje de personas mayores
+de edad,el sexo con mas personas, las persona con mayor edad y menor edad
+Datos ejemplos:
+
+ | Rosa: 18 | Maria: 17 | Luz: 19 | Rafael: 23 | Marcos: 20 | Leo: 16 |
+
+Requerimientos(reqs) :
+R.a leer los datos ( Nombre, Edad ).
+R.b Reportar la cnatidad de personas procesadas.
+R.c Reportar cantidad de personas mayores de edad.
+R.d Calcular el porcentaje de personas mayores de edad 
+R.e Reportar  el sexo con mas personas
+R.f reportar las persona con mayor edad
+R.g reportar las persona con menor edad
+
+Analisis(pasos):
+1.Tabular la data de ejemplos.
+2.Identificar los requerimientos
+3.Mostrar las salidas segun los requerimientos
+4.Diseñar las clases (CL_grupo, CL_persona)
+5.Marcar los Metodos y mostrar la abstratraccion respectiva
+
+ _____________________________   ____________________________
+|   CL_grupo                  | |   CL_persona               |
+|_____________________________| |____________________________|
+|-cntPer                      | |-Nombre                     |
+|-cntMa                       | |-Edad                       |
+|-cntMasculino                | |____________________________|
+|-cntFemenino                 | |+ constructor(n,e)          |
+|-Mayor                       | |+ get Nombre()              |
+|-menor                       | |+ get Edad ()               |           
+|-auxMayor                    | |____________________________|
+|-auxMenor____________________| 
+|+ constructor()*1            | 
+|+ ProcesarPersona() *2       | 
+|+ cantidadPer()              | 
+|+ cantidadMa()               | 
+|+ porcentajeMa()             | 
+|+ comparativaSexo()          | 
+|+ mayorEdad()                | 
+|+ nombreMayor()              | 
+|+ menorEdad()                | 
+|+ nombreMenor                | 
+|_____________________________|
+*1 Inicializar cnt= 0 
+*2 Contar Personas : CntPer += 1   
+  contar personas mayores de edad :
+  if (Persona.edad >= 18)
+  cnt Ma += 1
+  contar mujeres y hombres:
+  if (p.sexo === 0) {
+      this.cntFemenino++;
+    }
+    if (p.sexo === 1) {
+      this.cntMasculino++;
+    }
+  La mayor  y menor edad:
+   if (p.edad < this.menor) {
+      this.menor = p.edad;
+      this.auxMenor = p.nombre;
+    }
+
+    if (p.edad > this.mayor) {
+      this.mayor = p.edad;
+      this.auxMayor = p.nombre;
+    }
+
