@@ -1,25 +1,25 @@
 import Cl_mPersona from "./Cl_mPersona.js";
 
 export default class Cl_mGrupo {
-  private _contPersonas: number = 0;
-  private _contMayores: number = 0;
+  private _cntPer: number = 0;
+  private _cntMa: number = 0;
 
   procesarPersona(p: Cl_mPersona): void {
-    this._contPersonas++;
+    this._cntPer++;
     // Condición de mayoría de edad (>= 18)
     if (p.edad >= 18) {
-      this._contMayores++;
+      this._cntMa++;
     }
   }
 
-  get contPersonas(): number {
-    return this._contPersonas;
+  get cantidadPer(): number {
+    return this._cntPer;
   }
-  get contMayores(): number {
-    return this._contMayores;
+  get cantidadMa(): number {
+    return this._cntMa;
   }
-  get porcentajeMayores(): number {
-    if (this._contPersonas === 0) return 0;
-    return (this._contMayores / this._contPersonas) * 100;
+  get porcentajeMa(): number {
+    if (this._cntPer === 0) return 0;
+    return (this._cntMa / this._cntPer) * 100;
   }
 }
